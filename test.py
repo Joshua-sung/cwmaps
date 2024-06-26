@@ -114,37 +114,28 @@ for category, query in categories.items():
                 reviews = place.find_element(By.CLASS_NAME, 'UY7F9').text
             except:
                 reviews = '0'  # 리뷰가 없는 경우 기본값 설정
+            
+            info_content = None
+            expense = None
 
             # 상세 페이지로 이동하여 추가 정보 추출
             place.find_element(By.TAG_NAME, 'a').click()
             time.sleep(3)  # 페이지 로드 대기
             
-            operation_time = ""
-            expense = ""
-            info_title = ""
-            info_content = ""
-            information = ""
-            
             try:
                 operation_time = driver.find_element(By.XPATH, "//div[@data-section-id='hours']/div/div[1]").text
             except:
-                pass
-            
-            try:
-                expense = driver.find_element(By.XPATH, "//div[@data-section-id='price']/div/span[1]").text
-            except:
-                pass
-            
+                operation_time = None
+   
             try:
                 info_title = driver.find_element(By.CLASS_NAME, 'section-summary-title').text
-                info_content = driver.find_element(By.CLASS_NAME, 'section-summary-text').text
             except:
-                pass
+                info_title = None
             
-            try:
-                information = driver.find_element(By.XPATH, "//div[@data-section-id='phone']/div/span[1]").text
+            try:  
+                information = place.find_element(By.CLASS_NAME, 'Io6YTe fontBodyMedium kR99db ').text
             except:
-                pass
+                information = None
             
             all_results.append({
                 'data id_info': id_counter,
