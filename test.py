@@ -114,6 +114,11 @@ for category, query in categories.items():
                 reviews = place.find_element(By.CLASS_NAME, 'UY7F9').text
             except:
                 reviews = '0'  # 리뷰가 없는 경우 기본값 설정
+
+            try:
+                info_title =driver.find_element(By.XPATH,'//*[@id="QA0Szd"]/div/div/div[1]/div[2]/div/div[1]/div/div/div[1]/div[1]/div[3]/div/div[2]/div[4]/div[1]/div/div/div[2]/div[4]/div[1]/span[1]').text
+            except:
+                info_title = None
             
             info_content = None
             expense = None
@@ -127,10 +132,6 @@ for category, query in categories.items():
             except:
                 operation_time = None
    
-            try:
-                info_title = driver.find_element(By.CLASS_NAME, 'section-summary-title').text
-            except:
-                info_title = None
             
             try:  
                 information = place.find_element(By.CLASS_NAME, 'Io6YTe fontBodyMedium kR99db ').text
