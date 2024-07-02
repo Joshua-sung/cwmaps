@@ -11,25 +11,26 @@ load_dotenv()
 API_KEY = os.getenv('API_KEY')
 
 # 도시와 국가 설정
-city = "Fukuoka"
+city = "Osaka"
 country = "Japan"
 
 # 카테고리 목록
 categories = [
     'Historic site', 'Theme Park', 'Activity', 'Natural Scenery', 'Things to do', 
-    'Museums', 'Night View', 'Nature Reserve', 'Zoo', 'Theme Tour', 
+    'Museums'
+    , 'Night View', 'Nature Reserve', 'Zoo', 'Theme Tour', 
     'Monument', 'Art Gallery', 'Museum of Art', 'Landmark', 'Cultural Heritage',
-    'Botanical Garden', 'Aquarium', 'Scenic Drive', 'Hiking Trail', 'Wildlife Sanctuary', 
+    'Botanical Garden', 'Hiking Trail', 'Wildlife Sanctuary', 
     'Mountain View', 'Waterfall', 'Lake', 'Beach', 'National Park', 
     'Historical Village', 'Archaeological Site', 'Castle', 'Fort', 
     'Traditional Market', 'Local Festival', 'Scenic Railway', 'Gardens', 
-    'Public Park', 'Skyline View', 'City Tour', 'Adventure Park', 
-    'Botanical Park', 'Urban Park', 'Observation Deck', 'Art District', 
+    'Public Park', 'Skyline View', 'Adventure Park', 
+    'Botanical Park', 'Urban Park', 'Art District', 
     'Historical Building', 'Architectural Marvel'
 ]
 
 # 저장할 최대 데이터 개수
-max_data_count = 227
+max_data_count = 213
 
 # 모든 결과를 저장할 리스트 및 중복 확인을 위한 집합
 all_results = []
