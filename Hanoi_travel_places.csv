@@ -1,0 +1,6 @@
+﻿data id_info,nation,region,name,operationTime,expense,infoTitle,infoContent,information,map_url,rating,reviews
+1,Vietnam,Hanoi,동킨 응이아툭 광장(Dong Kinh Nghia Thuc Square),"Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday: Open 24 hours",,,,,https://www.google.com/maps/place/?q=place_id:ChIJZ_617L-rNTERbG1UGCP1G98,4.5,8451
+2,Vietnam,Hanoi,못꼿 사원(한기둥 사원)(One Pillar Pagoda),"Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday: 7:00 AM – 6:00 PM",,,,,https://www.google.com/maps/place/?q=place_id:ChIJ7XWEcqGrNTERrsLf6W8259s,4.3,6887
+3,Vietnam,Hanoi,따히엔 맥주거리(Old Quarter Ta Hien Corner),"월요일, 화요일, 수요일, 목요일: 휴무; 금요일, 토요일, 일요일: 오후 7:00~11:00",,,,,https://www.google.com/maps/place/?q=place_id:ChIJd64Vx8CrNTERulxZIacQ3Bg,4.4,5425
+4,Vietnam,Hanoi,하노이깃발탑(Hanoi Flagtower),"월요일: 휴무; 화요일, 수요일, 목요일, 금요일, 토요일, 일요일: 오전 9:00 ~ 오후 5:00",,,,,https://www.google.com/maps/place/?q=place_id:ChIJxZVbuqKrNTER4I2XSRfxbLg,4.5,1439
+5,Vietnam,Hanoi,East O Marx,"Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday: Open 24 hours",,,,,https://www.google.com/maps/place/?q=place_id:ChIJL3TBVvarNTERf849NXkCNLQ,4.2,804
