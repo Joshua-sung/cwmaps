@@ -1,0 +1,30 @@
+data id_info,nation,region,name,operationTime,expense,infoTitle,infoContent,information,map_url,popurality,rating,Popularity
+1,China,Dalian,다롄 저우수이쯔 국제공항,,,,,,https://www.google.com/maps/place/%EB%8B%A4%EB%A1%84+%EC%A0%80%EC%9A%B0%EC%88%98%EC%9D%B4%EC%AF%94+%EA%B5%AD%EC%A0%9C%EA%B3%B5%ED%95%AD/data=!4m7!3m6!1s0x358f5e0a684a1fd9:0x19c6dc026602ec26!8m2!3d38.9655556!4d121.5383333!16zL20vMDVrZ2Nz!19sChIJ2R9KaApejzURJuwCZgLcxhk?authuser=0&hl=ko&rclk=1,,3.8,268.0
+2,China,Dalian,인터콘티넨탈 다롄,,,,,,https://www.google.com/maps/place/%EC%9D%B8%ED%84%B0%EC%BD%98%ED%8B%B0%EB%84%A8%ED%83%88+%EB%8B%A4%EB%A1%84/data=!4m10!3m9!1s0x35858aacc6c73d77:0x967e393447ec9b01!5m2!4m1!1i2!8m2!3d38.91968!4d121.6357!16s%2Fg%2F11gghf3vb5!19sChIJdz3HxqyKhTURAZvsRzQ5fpY?authuser=0&hl=ko&rclk=1,,4.4,127.0
+3,China,Dalian,Inn Fine,,,,,,https://www.google.com/maps/place/Inn+Fine/data=!4m10!3m9!1s0x3585fa8ad9f0ea8d:0x3dec7e723aed3640!5m2!4m1!1i2!8m2!3d39.0493772!4d121.7676544!16s%2Fg%2F1tfxdn0q!19sChIJjerw2Yr6hTURQDbtOnJ-7D0?authuser=0&hl=ko&rclk=1,,4.1,112.0
+4,China,Dalian,Somerset Grand Central Dalian,,,,,,https://www.google.com/maps/place/Somerset+Grand+Central+Dalian/data=!4m10!3m9!1s0x3585fa61b47158b1:0x2b38d85c11000188!5m2!4m1!1i2!8m2!3d39.0484366!4d121.7648072!16s%2Fg%2F11b6d6lv7h!19sChIJsVhxtGH6hTURiAEAEVzYOCs?authuser=0&hl=ko&rclk=1,,4.3,94.0
+5,China,Dalian,Lushun Russo-Japanese Prison,,,안중근 의사가 처형되기 전에 수감되었던 20세기 초의 감옥에 위치한 박물관입니다.,,,https://www.google.com/maps/place/Lushun+Russo-Japanese+Prison/data=!4m7!3m6!1s0x358f606a7a68e8cd:0xb85b5ced8209109!8m2!3d38.8249184!4d121.2645799!16s%2Fg%2F1235kf7_!19sChIJzehoempgjzURCZEg2M61hQs?authuser=0&hl=ko&rclk=1,,4.3,78.0
+6,China,Dalian,힐튼 다롄,,,,,,https://www.google.com/maps/place/%ED%9E%90%ED%8A%BC+%EB%8B%A4%EB%A1%84/data=!4m10!3m9!1s0x3585f53b90bb4c15:0x16c068dc26268950!5m2!4m1!1i2!8m2!3d38.92835!4d121.67046!16s%2Fg%2F1tcyh_fd!19sChIJFUy7kDv1hTURUIkmJtxowBY?authuser=0&hl=ko&rclk=1,,4.4,73.0
+7,China,Dalian,Zhongshan Square,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJt-oTQEz1hTURGerG2OAvNGk,209.0,4.3,
+8,China,Dalian,星海湾浴场,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJ6eXSTJ5hjzURBq79AK5VIIk,206.0,4.2,
+9,China,Dalian,Laodong Park,,,,,국제 전화번호: +86 411 8364 5463,https://www.google.com/maps/place/?q=place_id:ChIJn5eYWa-KhTURNEhzrZHbGG8,198.0,4.4,
+10,China,Dalian,인터콘티넨탈 다롄(Intercontinental Dalian),,,,,국제 전화번호: +86 411 8236 6666 웹사이트: https://www.ihg.com/intercontinental/hotels/us/en/dalian/dlcha/hoteldetail,https://www.google.com/maps/place/?q=place_id:ChIJdz3HxqyKhTURAZvsRzQ5fpY,127.0,4.4,
+11,China,Dalian,Xinghai Park,,,,,국제 전화번호: +86 411 8469 2514,https://www.google.com/maps/place/?q=place_id:ChIJ98NFwW5hjzUR1z1bwJ1GrUE,114.0,4.4,
+12,China,Dalian,Dalian Discovery Kingdom,,,,,국제 전화번호: +86 411 8790 0000,https://www.google.com/maps/place/?q=place_id:ChIJp8HvftHfhTURfhXNoVxFH7w,100.0,4.2,
+13,China,Dalian,Dalian Russia Folk Street,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJO9jq_lD1hTURd5F9CYBttEw,100.0,3.4,
+14,China,Dalian,大连星海广场,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJfx-yEphhjzURaYIthGQU5lo,90.0,4.5,
+15,China,Dalian,Dalian Olympic Square,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJCc9yyj9gjzURIkZ_iCpS01Y,83.0,4.3,
+16,China,Dalian,힐튼 다롄(Hilton Dalian),,,,,국제 전화번호: +86 411 8677 0000 웹사이트: http://hilton.com.cn/dalian,https://www.google.com/maps/place/?q=place_id:ChIJFUy7kDv1hTURUIkmJtxowBY,73.0,4.4,
+17,China,Dalian,Holiday Inn Express Dalian City Centre,,,,,국제 전화번호: +86 411 8813 8888 웹사이트: https://www.ihg.com/holidayinnexpress/hotels/cn/zh/dalian/dlccc/hoteldetail,https://www.google.com/maps/place/?q=place_id:ChIJlVAlC071hTURMgUCfxw4WPE,72.0,3.7,
+18,China,Dalian,"The Castle Hotel, a Luxury Collection Hotel, Dalia",,,,,국제 전화번호: +86 411 8656 0000 웹사이트: https://www.marriott.com/hotels/travel/dlclc-the-castle-hotel-a-luxury-collection-hotel-dalian/,https://www.google.com/maps/place/?q=place_id:ChIJbWnm1aJhjzUR1niQGqznaoM,67.0,4.5,
+19,China,Dalian,Zhongshan Park,,,,,국제 전화번호: +86 411 8460 3282,https://www.google.com/maps/place/?q=place_id:ChIJbx1aHWpgjzURhajQy8tyGFw,67.0,3.9,
+20,China,Dalian,Grand Hyatt Dalian,,,,,국제 전화번호: +86 411 3988 1234 웹사이트: https://www.hyatt.com/en-US/hotel/china/grand-hyatt-dalian/dalgh,https://www.google.com/maps/place/?q=place_id:ChIJ1crt0aFhjzURd_cYpu7s9tU,66.0,4.6,
+21,China,Dalian,Dalian Development Zone Five Color City,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJs9iOUvL6hTURnaWZ8JL5WfU,60.0,4.2,
+22,China,Dalian,Dalian Forest Zoo,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJw6ZUiMVhjzURv8hPqIlzp7U,55.0,4.3,
+23,China,Dalian,Dalian University of Technology,,,,,국제 전화번호: +86 411 8470 8221 웹사이트: https://www.dlut.edu.cn/,https://www.google.com/maps/place/?q=place_id:ChIJrUuPGalmjzURvn9wl3uLhvk,55.0,4.6,
+24,China,Dalian,뉴 월드 다롄 호텔(New World Dalian Hotel),,,,,국제 전화번호: +86 411 8807 8888 웹사이트: http://www.dalian.newworldhotels.com/,https://www.google.com/maps/place/?q=place_id:ChIJ3XDywTf1hTUR_x0VkGtYzX0,49.0,4.2,
+25,China,Dalian,圣亚海洋世界,,,,,국제 전화번호: +86 411 8467 9517,https://www.google.com/maps/place/?q=place_id:ChIJASQ1BG5hjzURibzoZ-yL2LU,44.0,2.5,
+26,China,Dalian,Dalian Bainian Memorial Chengdiao,,,,,웹사이트: https://vacation.eztravel.com.tw/sight/plc0000102670/%E7%99%BE%E5%B9%B4%E5%9F%8E%E9%9B%95,https://www.google.com/maps/place/?q=place_id:ChIJQzcBPp9hjzURnXFbn1hgPAo,40.0,4.4,
+27,China,Dalian,Fujiazhuang Park,,,,,국제 전화번호: +86 411 8240 0574,https://www.google.com/maps/place/?q=place_id:ChIJn5WSLOFhjzURJ7eReHIkI4k,38.0,4.2,
+28,China,Dalian,胜利广场,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJf8r2layKhTURRx9QZ_r_18c,37.0,4.0,
+29,China,Dalian,Dalian Laohutan Ocean Park （North Gate）,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJh67dLB2LhTURDlTGLAWcHgg,37.0,3.8,

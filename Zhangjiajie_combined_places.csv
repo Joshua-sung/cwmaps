@@ -1,0 +1,34 @@
+data id_info,nation,region,name,operationTime,expense,infoTitle,infoContent,information,map_url,rating,popurality,Popularity
+1,China,Zhangjiajie,장자제 국가삼림공원,,,"천문산의 1,400m 높이 절벽에 산책로와 유리 다리가 매달려 있습니다.",,,https://www.google.com/maps/place/%EC%9E%A5%EC%9E%90%EC%A0%9C+%EA%B5%AD%EA%B0%80%EC%82%BC%EB%A6%BC%EA%B3%B5%EC%9B%90/data=!4m7!3m6!1s0x369bafca1a43aca1:0xa18079ec65a40b6f!8m2!3d29.315305!4d110.434767!16zL20vMDljZ3Bt!19sChIJoaxDGsqvmzYRbwukZex5gKE?authuser=0&hl=ko&rclk=1,4.7,,698.0
+2,China,Zhangjiajie,Zhangjiajie Neodalle International Holiday Hotel,,,,,,https://www.google.com/maps/place/Zhangjiajie+Neodalle+International+Holiday+Hotel/data=!4m10!3m9!1s0x369b08b75798d601:0x2c55d8d65a2f45e1!5m2!4m1!1i2!8m2!3d29.34188!4d110.540086!16s%2Fg%2F11cm1ky90k!19sChIJAdaYV7cImzYR4UUvWtbYVSw?authuser=0&hl=ko&rclk=1,4.4,,500.0
+3,China,Zhangjiajie,Qinghe Jinjiang International Hotel,,,,,,https://www.google.com/maps/place/Qinghe+Jinjiang+International+Hotel/data=!4m10!3m9!1s0x369b08cade102e19:0xeab4a0cdcac98abd!5m2!4m1!1i2!8m2!3d29.349562!4d110.547724!16s%2Fg%2F1tdq487z!19sChIJGS4Q3soImzYRvYrJys2gtOo?authuser=0&hl=ko&rclk=1,4.0,,264.0
+4,China,Zhangjiajie,荷花机场,,,,,,https://www.google.com/maps/place/%E8%8D%B7%E8%8A%B1%E6%9C%BA%E5%9C%BA/data=!4m7!3m6!1s0x369bae21c27a1087:0x64c734c88e4626d3!8m2!3d29.103856!4d110.451191!16s%2Fm%2F0289jg0!19sChIJhxB6wiGumzYR0yZGjsg0x2Q?authuser=0&hl=ko&rclk=1,3.9,,111.0
+5,China,Zhangjiajie,풀만 장자제 호텔,,,,,,https://www.google.com/maps/place/%ED%92%80%EB%A7%8C+%EC%9E%A5%EC%9E%90%EC%A0%9C+%ED%98%B8%ED%85%94/data=!4m10!3m9!1s0x369b08b71c1c0edf:0xc43826d33065ee97!5m2!4m1!1i2!8m2!3d29.3440252!4d110.5413063!16s%2Fg%2F1tfc4wkc!19sChIJ3w4cHLcImzYRl-5lMNMmOMQ?authuser=0&hl=ko&rclk=1,4.2,,97.0
+6,China,Zhangjiajie,黄石寨六奇阁,,,,,,https://www.google.com/maps/place/%E9%BB%84%E7%9F%B3%E5%AF%A8%E5%85%AD%E5%A5%87%E9%98%81/data=!4m7!3m6!1s0x369b06c51f9742b7:0xcdee944d93469a85!8m2!3d29.336797!4d110.440972!16s%2Fg%2F1tk_mjvf!19sChIJt0KXH8UGmzYRhZpGk02U7s0?authuser=0&hl=ko&rclk=1,4.5,,64.0
+7,China,Zhangjiajie,Zhangjiajie Glass Bridge,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJx-X060YNmzYR3DnNzEWGXC4,4.5,1701.0,
+8,China,Zhangjiajie,Zhangjiajie Grand Canyon （Southwest Gate）,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJaUhkOUYNmzYRsgDzbtxBLNQ,4.4,1255.0,
+9,China,Zhangjiajie,Yuanjiajie,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJMeawKk0PmzYRVoqGJkusxhg,4.6,1045.0,
+10,China,Zhangjiajie,Tianmenshan Cableway,,,,,국제 전화번호: +86 744 836 6099,https://www.google.com/maps/place/?q=place_id:ChIJrz0FK8-vmzYRPYoPH6VDRxY,4.6,1037.0,
+11,China,Zhangjiajie,장자제 국가삼림공원(Zhangjiajie National Forest Park),,,,,웹사이트: http://zjjnfp.com/,https://www.google.com/maps/place/?q=place_id:ChIJoaxDGsqvmzYRbwukZex5gKE,4.7,697.0,
+12,China,Zhangjiajie,Tianmen Shan(Tianmen Mountain),,,,,,https://www.google.com/maps/place/?q=place_id:ChIJz7mBDfmwmzYRWPIk9Fgr6AU,4.7,639.0,
+13,China,Zhangjiajie,十里画廊,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJAUVyGfsFmzYRUGVxYxi_4qM,4.3,269.0,
+14,China,Zhangjiajie,Huanglongdong Scenic Area,,,,,국제 전화번호: +86 744 561 8489,https://www.google.com/maps/place/?q=place_id:ChIJIXVBJ6AOmzYRCQW-cdKfGWA,4.5,266.0,
+15,China,Zhangjiajie,Tianmen Fairy Mountain （North Gate）,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJ_9hklEywmzYRuu-jsIT8WAQ,4.5,264.0,
+16,China,Zhangjiajie,Tianmen Mountain National Park,,,,,국제 전화번호: +86 744 836 9999,https://www.google.com/maps/place/?q=place_id:ChIJBWiAC_-wmzYRlCfOs8HywFs,4.7,180.0,
+17,China,Zhangjiajie,雾海金龟,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJeS0sd9MGmzYRkQv5n_6oH2U,4.5,168.0,
+18,China,Zhangjiajie,Tujia Folk Customs Park,,,,,국제 전화번호: +86 744 828 2222,https://www.google.com/maps/place/?q=place_id:ChIJi9s8wkiumzYR8mjJ5GAsMtA,4.3,164.0,
+19,China,Zhangjiajie,Wulingyuan,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJJbp_zqYImzYR5a6S0Fuykdc,4.5,152.0,
+20,China,Zhangjiajie,Baofenghu Scenic Area,,,,,국제 전화번호: +86 744 561 8272,https://www.google.com/maps/place/?q=place_id:ChIJR_ilW-oImzYRjeW7FGd96T4,4.2,148.0,
+21,China,Zhangjiajie,Zhangjiajie Grand Canyon,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJVdMnu6QSmzYRjwEqG8ZXqro,4.3,135.0,
+22,China,Zhangjiajie,National Forest Pk of Tianmen Mountain,,,,,국제 전화번호: +86 744 836 6099,https://www.google.com/maps/place/?q=place_id:ChIJIwOzC1awmzYRNskruUrMRcY,4.8,113.0,
+23,China,Zhangjiajie,Dreams Zhangjiajie,,,,,웹사이트: http://www.cn-zhangjiajie.cn/html/38/n_23438.html,https://www.google.com/maps/place/?q=place_id:ChIJpcVmfbQImzYRHsD_uUE0U2Y,4.5,100.0,
+24,China,Zhangjiajie,풀만 장자제 호텔(Pullman Zhangjiajie),,,,,국제 전화번호: +86 744 888 8888 웹사이트: http://www.pullmanhotels.com/zh/hotel-7934-%E5%BC%A0%E5%AE%B6%E7%95%8C%E4%BA%AC%E6%AD%A6%E9%93%82%E5%B0%94%E6%9B%BC%E9%85%92%E5%BA%97/index.shtml,https://www.google.com/maps/place/?q=place_id:ChIJ3w4cHLcImzYRl-5lMNMmOMQ,4.2,97.0,
+25,China,Zhangjiajie,Charming Xiangxi Grand Theatre,,,,,국제 전화번호: +86 744 566 8095,https://www.google.com/maps/place/?q=place_id:ChIJKaoCh7UImzYRjORxlv1IKBs,4.3,92.0,
+26,China,Zhangjiajie,Jinbian Brook,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJ7WckN_IGmzYRiqRUD82sHSo,4.5,68.0,
+27,China,Zhangjiajie,Baofeng Lake,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJDWUltu4ImzYR07fga6IQttw,4.2,60.0,
+28,China,Zhangjiajie,He Long Park,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJ7Za0oPAFmzYRjPyu215E72w,4.2,49.0,
+29,China,Zhangjiajie,Huangshizhai,,,,,웹사이트: https://vacation.eztravel.com.tw/sight/plc0000080318/huangshizhai-%E9%BB%83%E7%9F%B3%E5%AF%A8,https://www.google.com/maps/place/?q=place_id:ChIJBbl0A9QGmzYR4LohbSUbe2E,4.6,46.0,
+30,China,Zhangjiajie,Yangjiajie Scenic Area,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJRd8K2lsBmzYR3eL933cOPcE,4.6,46.0,
+31,China,Zhangjiajie,Zhangjiajie Junsheng Painting Institute,,,,,국제 전화번호: +86 744 830 1239,https://www.google.com/maps/place/?q=place_id:ChIJ2bx0B6SvmzYR-lhFAqOKy38,4.0,37.0,
+32,China,Zhangjiajie,Tianzishan Nature Reserve,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJwbGc8zAEmzYR-lSxqBcxNog,4.6,34.0,
+33,China,Zhangjiajie,Wulingyuan Scenic Area,,,,,국제 전화번호: +86 744 561 1198,https://www.google.com/maps/place/?q=place_id:ChIJUyM0FVwGmzYRBZfSzn_jkI8,4.4,32.0,

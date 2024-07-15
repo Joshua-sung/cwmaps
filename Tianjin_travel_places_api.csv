@@ -1,0 +1,18 @@
+﻿data id_info,nation,region,name,operationTime,expense,infoTitle,infoContent,information,map_url,popurality,rating
+1,China,Tianjin,天津之眼,,,,,국제 전화번호: +86 22 2628 8830,https://www.google.com/maps/place/?q=place_id:ChIJmUORwuL97TURvOi74msbYZg,212,4.4
+2,China,Tianjin,五大道,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJv5Euo6n97TUR_5HwsXJRiuw,114,4.3
+3,China,Tianjin,Century Clock,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJj8p4DMf97TURWMmj3Frbmj0,99,4.0
+4,China,Tianjin,Tianjin Museum,"월: 휴무; 화, 수, 목, 금, 토, 일: 09:00~16:30",,,,국제 전화번호: +86 22 8388 3000 웹사이트: http://www.tjbwg.com/,https://www.google.com/maps/place/?q=place_id:ChIJR6PKLSX97TURGzHh8Po9v0Q,89,4.5
+5,China,Tianjin,Marco Polo Square,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJdVjvcsD97TURI2HOXOjYU14,89,4.2
+6,China,Tianjin,Porcelain House,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJ16rXmbz97TURBmzpsuyew_g,82,3.6
+7,China,Tianjin,"The Ritz-Carlton, Tianjin",,,,,국제 전화번호: +86 22 5857 8888 웹사이트: http://www.ritzcarlton.com/en/Properties/Tianjin/Default.htm,https://www.google.com/maps/place/?q=place_id:ChIJTb4RHLL97TURIhfpoWuulHc,80,4.8
+8,China,Tianjin,St. Regis Tianjin,,,,,국제 전화번호: +86 22 2420 7216 웹사이트: https://www.marriott.com/hotels/travel/tsnxr-the-st-regis-tianjin/,https://www.google.com/maps/place/?q=place_id:ChIJmfxqLZf97TURE4Lk3STtxx4,69,4.4
+9,China,Tianjin,Tianjin Radio and Television Tower,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJH2XwvVv97TURxl9EfKBk97s,62,4.0
+10,China,Tianjin,Drum Tower of Nanjing,,,,,국제 전화번호: +86 22 2727 3443,https://www.google.com/maps/place/?q=place_id:ChIJ7XqsvfP97TURFYcILrrFuM4,56,4.1
+11,China,Tianjin,Tianjin Zoo,"월, 화, 수, 목, 금, 토, 일: 08:30~17:00",,,,국제 전화번호: +86 22 2391 6111,https://www.google.com/maps/place/?q=place_id:ChIJIW6mpQcI7jURuSfdEvjjZZI,46,4.1
+12,China,Tianjin,Tianjin Olympic Center,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJXx7NnAII7jURI4s8tTXH_pU,41,4.2
+13,China,Tianjin,天津水上公园,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJd71XJW0H7jUR7VehSg1q5iw,39,4.3
+14,China,Tianjin,Palace of Queen of Heaven in Tianjin,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJhxrV0Oj97TURN200y3gXmgw,39,4.3
+15,China,Tianjin,Jingyuan,,,,,국제 전화번호: +86 22 2731 1618,https://www.google.com/maps/place/?q=place_id:ChIJm5RFu5v97TURFcKgRGZDyXw,35,4.2
+16,China,Tianjin,Tianjin Wenmiao Museum,,,,,국제 전화번호: +86 22 2727 2812,https://www.google.com/maps/place/?q=place_id:ChIJa28SlO797TURaSUSLy-xjQE,32,4.1
+17,China,Tianjin,People's Park,,,,,,https://www.google.com/maps/place/?q=place_id:ChIJR2N3NwL97TUR7R0RKpa9mYk,30,4.4

@@ -13,23 +13,23 @@ load_dotenv()
 API_KEY = os.getenv('API_KEY')
 
 # 사용자 정의 변수
-max_data_count = 154  # 저장할 최대 데이터 개수
-DAILY_REQUEST_LIMIT = 3  # 하루 요청 한도 설정
+max_data_count = 82  # 저장할 최대 데이터 개수
+DAILY_REQUEST_LIMIT = 150  # 하루 요청 한도 설정
 request_count = 0  # 현재 요청 횟수
-city = "Kyoto"  # 도시 설정
-country = "Japan"  # 국가 설정
-categories = [  # 카테고리 목록
-    'Historic site'
-    , 'Theme Park', 'Activity', 'Natural Scenery', 'Things to do',
-    'Museums', 'Night View', 'Nature Reserve', 'Zoo', 'Theme Tour',
-    'Monument', 'Art Gallery', 'Museum of Art', 'Landmark', 'Cultural Heritage',
-    'Botanical Garden', 'Hiking Trail', 'Wildlife Sanctuary',
-    'Mountain View', 'Waterfall', 'Lake', 'Beach', 'National Park',
-    'Historical Village', 'Archaeological Site', 'Castle', 'Fort',
-    'Traditional Market', 'Local Festival', 'Scenic Railway', 'Gardens',
-    'Public Park', 'Skyline View', 'Adventure Park',
-    'Botanical Park', 'Urban Park', 'Art District',
-    'Historical Building', 'Architectural Marvel'
+city = "Dalian"  # 도시 설정
+country = "China"  # 국가 설정
+categories = [
+    'Historic site', 'Theme Park', 'Activity', 'Natural Scenery','Tourist attraction','Things to do', 
+    'Museums','Landmark',
+    'Night View', 'Nature Reserve', 'Zoo', 'Theme Tour', 'Traditional Market', 
+    'Architectural Marvel','Monument', 'Art Gallery', 'Museum of Art',  'Cultural Heritage',
+    'Botanical Garden', 'Hiking Trail', 'Wildlife Sanctuary', 
+    'Mountain View', 'Waterfall', 'Lake', 'Beach', 'National Park', 
+    'Historical Village', 'Archaeological Site', 'Castle', 'Fort', 
+    'Local Festival', 'Scenic Railway', 'Gardens', 
+    'Public Park', 'Skyline View', 'Adventure Park', 
+    'Botanical Park', 'Urban Park', 'Art District', 
+    'Historical Building', 
 ]
 
 # 모든 결과를 저장할 리스트 및 중복 확인을 위한 집합
@@ -127,21 +127,21 @@ def convert_to_24_hour(time_str):
 
 def parse_opening_hours(opening_hours):
     if not opening_hours:
-        return "알 수 없음"
+        return ""
 
     weekday_text = opening_hours.get('weekday_text', [])
     if not weekday_text:
-        return "알 수 없음"
+        return ""
 
     # 영어 요일을 한글로 변환하는 딕셔너리
     weekday_translation = {
-        'Monday': '월요일',
-        'Tuesday': '화요일',
-        'Wednesday': '수요일',
-        'Thursday': '목요일',
-        'Friday': '금요일',
-        'Saturday': '토요일',
-        'Sunday': '일요일',
+        'Monday': '월',
+        'Tuesday': '화',
+        'Wednesday': '수',
+        'Thursday': '목',
+        'Friday': '금',
+        'Saturday': '토',
+        'Sunday': '일',
         'Closed': '휴무'
     }
 
@@ -163,12 +163,15 @@ def parse_opening_hours(opening_hours):
     formatted_hours = []
     for hours, days in hours_dict.items():
         formatted_days = ", ".join(days)
-        if "AM" in hours or "PM" in hours:
-            start_time, end_time = hours.split(" – ")
-            start_time_24 = convert_to_24_hour(start_time.strip())
-            end_time_24 = convert_to_24_hour(end_time.strip())
-            hours = f"{start_time_24}~{end_time_24}"
-        formatted_hours.append(f"{formatted_days}: {hours}")
+        try:
+            if "AM" in hours or "PM" in hours:
+                start_time, end_time = hours.split(" – ")
+                start_time_24 = convert_to_24_hour(start_time.strip())
+                end_time_24 = convert_to_24_hour(end_time.strip())
+                hours = f"{start_time_24}~{end_time_24}"
+            formatted_hours.append(f"{formatted_days}: {hours}")
+        except ValueError:
+            formatted_hours.append(f"{formatted_days}: {hours} (unparsed)")
 
     return "; ".join(formatted_hours)
 
@@ -205,9 +208,9 @@ for category in categories:
 
             details = get_place_details(place_id_en)
             rating = details.get('rating', '0')
-            reviews = details.get('user_ratings_total', 0)
-            if reviews < 50:
-                continue  # 리뷰 수가 50개 미만인 장소는 무시
+            popurality = details.get('user_ratings_total', 0)
+            if popurality < 30:
+                continue  # 리뷰 수가 30개 미만인 장소는 무시
 
             operation_time = parse_opening_hours(details.get('opening_hours', {}))
 
@@ -224,12 +227,12 @@ for category in categories:
 
             # 연락처 정보를 information 필드에 포함
             information = {
-                '전화번호': international_phone_number,
+                '국제 전화번호': international_phone_number,
                 '웹사이트': website
             }
 
             # 정보를 문자열로 결합
-            information_str = ', '.join([f"{key}: {value}" for key, value in information.items() if value])
+            information_str = ' '.join([f"{key}: {value}" for key, value in information.items() if value])
 
             all_results.append({
                 'nation': country,
@@ -242,7 +245,7 @@ for category in categories:
                 'information': information_str,
                 'map_url': map_url,
                 'rating': rating,
-                'reviews': reviews
+                'popurality': popurality
             })
 
         if not next_page_token_ko or not next_page_token_en:
@@ -251,7 +254,7 @@ for category in categories:
         time.sleep(2)
 
 # 리뷰 수를 기준으로 데이터 정렬
-all_results_sorted = sorted(all_results, key=lambda x: x['reviews'], reverse=True)
+all_results_sorted = sorted(all_results, key=lambda x: x['popurality'], reverse=True)
 
 # 상위 max_data_count개의 데이터만 저장
 data_to_save = all_results_sorted[:min(max_data_count, len(all_results_sorted))]
@@ -264,11 +267,11 @@ for idx, item in enumerate(data_to_save, start=1):
 df = pd.DataFrame(data_to_save)
 
 # 열 이름을 재정렬
-required_columns = ['data id_info', 'nation', 'region', 'name', 'operationTime', 'expense', 'infoTitle', 'infoContent', 'information', 'map_url', 'rating', 'reviews']
+required_columns = ['data id_info', 'nation', 'region', 'name', 'operationTime', 'expense', 'infoTitle', 'infoContent', 'information', 'map_url', 'popurality','rating' ]
 df = df[required_columns]
 
 # CSV 파일 저장
-output_file = f'{city}_travel_places.csv'
+output_file = f'{city}_travel_places_api.csv'
 df.to_csv(output_file, index=False, encoding='utf-8-sig')
 print(f"Data saved to {output_file}")
 

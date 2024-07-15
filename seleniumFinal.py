@@ -8,6 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import pandas as pd
+import re
 
 # Chrome 옵션 설정
 options = webdriver.ChromeOptions()
@@ -23,22 +24,34 @@ service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
 
 # 국가 정보
-country = "Japan"
+country = "China"
 
 # 도시 목록
-cities = ["Fukuoka", "Osaka"]
+cities = [
+    # "Shanghai", "Zhangjiajie", "Qingdao", 
+    "Tianjin"
+    # , "Beijing", "Hainan", "Xi'an", 
+    # "Dalian", "Chengdu", "Guangzhou", "Chongqing", "Shenzhen", "Yantai", "Xiamen", 
+    # "Hangzhou", "Suzhou", "Harbin", "Lijiang", "Kunming", "Nanjing", 
+    # "Yanbian Korean Autonomous Prefecture", "Guilin"
+]
 # 카테고리 목록 (영어로 변경)
 categories = [
-    'Historic site', 'Theme Park', 'Activity', 'Natural Scenery', 'Things to do', 
-    'Museums', 'Night View', 'Nature Reserve', 'Zoo', 'Theme Tour', 
-    'Monument', 'Art Gallery', 'Museum of Art'
+    'Historic site', 'Theme Park', 'Activity', 'Natural Scenery','Tourist attraction','Things to do', 
+    'Museums','Landmark',
+    'Night View', 'Nature Reserve', 'Zoo', 'Theme Tour', 'Traditional Market', 
+    'Architectural Marvel','Monument', 'Art Gallery', 'Museum of Art',  'Cultural Heritage',
+    'Botanical Garden', 'Hiking Trail', 'Wildlife Sanctuary', 
+    'Mountain View', 'Waterfall', 'Lake', 'Beach', 'National Park', 
+    'Historical Village', 'Archaeological Site', 'Castle', 'Fort', 
+    'Local Festival', 'Scenic Railway', 'Gardens', 
+    'Public Park', 'Skyline View', 'Adventure Park', 
+    'Botanical Park', 'Urban Park', 'Art District', 
+    'Historical Building', 
 ]
 
 # 중복 URL을 확인하기 위한 집합
 unique_urls = set()
-
-# 고유 번호를 위한 초기값
-id_counter = 1
 
 def get_places(driver):
     return driver.find_elements(By.CLASS_NAME, 'Nv2PK')
@@ -91,7 +104,11 @@ for city in cities:
                 
                 unique_urls.add(map_url)
                 
-                reviews = place.find_element(By.CLASS_NAME, 'UY7F9').text if place.find_elements(By.CLASS_NAME, 'UY7F9') else '0'
+                popularity = place.find_element(By.CLASS_NAME, 'UY7F9').text if place.find_elements(By.CLASS_NAME, 'UY7F9') else '0'
+                popularity = re.sub(r'[^\d]', '', popularity)  # 숫자가 아닌 문자 제거
+                popularity = int(popularity) if popularity else 0  # 빈 문자열을 0으로 처리
+                if popularity < 50:
+                    continue  # 리뷰 수가 50 미만인 경우 무시
 
                 info_content = None
                 expense = None
@@ -105,7 +122,6 @@ for city in cities:
                 information = place.find_element(By.CLASS_NAME, 'rogA2c ITvuef').text if place.find_elements(By.CLASS_NAME, 'rogA2c ITvuef') else ""
                 
                 all_results.append({
-                    'data id_info': id_counter,
                     'nation': country,  # 국가 추가
                     'region': city,  # 도시 이름 추가
                     'name': name,
@@ -115,11 +131,9 @@ for city in cities:
                     'infoContent': info_content,
                     'information': information,
                     'map_url': map_url,
+                    'popularity': popularity,  # 열 이름 변경
                     'rating': rating,
-                    'reviews': reviews
                 })
-                
-                id_counter += 1  # 고유 번호 증가
                 
                 driver.back()
                 time.sleep(3)
@@ -133,8 +147,19 @@ for city in cities:
     # 열 이름 확인
     print(df.columns)
 
+    # 'Popularity' 열이 존재하는지 확인하고 없으면 예외 처리
+    if 'popularity' not in df.columns:
+        print("Error: 'popularity' column not found in the DataFrame.")
+        df['popularity'] = 0  # 기본값 0으로 'popularity' 열 추가
+
+    # 리뷰 수 기준으로 내림차순 정렬
+    df = df.sort_values(by='popularity', ascending=False)
+
+    # data id_info 번호 부여
+    df.insert(0, 'data id_info', range(1, len(df) + 1))
+
     # 열 이름을 재정렬 (실제 열 이름 확인 후 필요 시 수정)
-    required_columns = ['data id_info', 'nation', 'region', 'name', 'operationTime', 'expense', 'infoTitle', 'infoContent', 'information', 'map_url', 'rating', 'reviews']
+    required_columns = ['data id_info', 'nation', 'region', 'name', 'operationTime', 'expense', 'infoTitle', 'infoContent', 'information', 'map_url', 'popularity', 'rating']
     for col in required_columns:
         if col not in df.columns:
             df[col] = ''  # 없는 열은 빈 값으로 채움
@@ -143,12 +168,12 @@ for city in cities:
     df = df[required_columns]
 
     # 도시별 CSV 파일로 저장
-    df.to_csv(f'{city}_travel_places.csv', index=False, encoding='utf-8-sig')
+    df.to_csv(f'{city}_travel_places_sele.csv', index=False, encoding='utf-8-sig')
 
 # 포맷 정보 저장
 format_info = {
-    'class(kr)': ['data id_info', '국가', '지역', '이름', '영업시간', '가격', '여행지 정보(간략)', '여행지 정보(상세)', '문의처', '구글지도 링크', '평점', '리뷰 수'],
-    'class(en)': ['data id_info', 'nation', 'region', 'name', 'operationTime', 'expense', 'infoTitle', 'infoContent', 'information', 'map_url', 'rating', 'reviews'],
+    'class(kr)': ['data id_info', '국가', '지역', '이름', '영업시간', '가격', '여행지 정보(간략)', '여행지 정보(상세)', '문의처', '구글지도 링크', '인기', '평점'],
+    'class(en)': ['data id_info', 'nation', 'region', 'name', 'operationTime', 'expense', 'infoTitle', 'infoContent', 'information', 'map_url', 'popularity', 'rating'],
     'type': ['num', 'string', 'string', 'string', 'string', 'string', 'string', 'string', 'string', 'url', 'num', 'num']
 }
 
