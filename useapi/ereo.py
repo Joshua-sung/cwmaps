@@ -13,11 +13,11 @@ load_dotenv()
 API_KEY = os.getenv('API_KEY')
 
 # 사용자 정의 변수
-max_data_count = 82  # 저장할 최대 데이터 개수
-DAILY_REQUEST_LIMIT = 150  # 하루 요청 한도 설정
+max_data_count = 140  # 저장할 최대 데이터 개수
+DAILY_REQUEST_LIMIT = 250  # 하루 요청 한도 설정
 request_count = 0  # 현재 요청 횟수
-city = "Dalian"  # 도시 설정
-country = "China"  # 국가 설정
+city = "Kobe"  # 도시 설정
+country = "Japan"  # 국가 설정
 categories = [
     'Historic site', 'Theme Park', 'Activity', 'Natural Scenery','Tourist attraction','Things to do', 
     'Museums','Landmark',
@@ -147,7 +147,7 @@ def parse_opening_hours(opening_hours):
 
     # 연중무휴 24시간 운영 처리
     if len(set(weekday_text)) == 1 and "Open 24 hours" in weekday_text[0]:
-        return "24시간 연중무휴"
+        return "연중무휴"
 
     hours_dict = {}
     for entry in weekday_text:
@@ -208,9 +208,9 @@ for category in categories:
 
             details = get_place_details(place_id_en)
             rating = details.get('rating', '0')
-            popurality = details.get('user_ratings_total', 0)
-            if popurality < 30:
-                continue  # 리뷰 수가 30개 미만인 장소는 무시
+            popularity = details.get('user_ratings_total', 0)
+            if popularity < 0:
+                continue  # 리뷰 수가 0개 미만인 장소는 무시
 
             operation_time = parse_opening_hours(details.get('opening_hours', {}))
 
@@ -227,8 +227,8 @@ for category in categories:
 
             # 연락처 정보를 information 필드에 포함
             information = {
-                '국제 전화번호': international_phone_number,
-                '웹사이트': website
+                '국제전화번호': international_phone_number,
+                '홈페이지': website
             }
 
             # 정보를 문자열로 결합
@@ -245,7 +245,7 @@ for category in categories:
                 'information': information_str,
                 'map_url': map_url,
                 'rating': rating,
-                'popurality': popurality
+                'popularity': popularity
             })
 
         if not next_page_token_ko or not next_page_token_en:
@@ -254,7 +254,7 @@ for category in categories:
         time.sleep(2)
 
 # 리뷰 수를 기준으로 데이터 정렬
-all_results_sorted = sorted(all_results, key=lambda x: x['popurality'], reverse=True)
+all_results_sorted = sorted(all_results, key=lambda x: x['popularity'], reverse=True)
 
 # 상위 max_data_count개의 데이터만 저장
 data_to_save = all_results_sorted[:min(max_data_count, len(all_results_sorted))]
@@ -267,7 +267,7 @@ for idx, item in enumerate(data_to_save, start=1):
 df = pd.DataFrame(data_to_save)
 
 # 열 이름을 재정렬
-required_columns = ['data id_info', 'nation', 'region', 'name', 'operationTime', 'expense', 'infoTitle', 'infoContent', 'information', 'map_url', 'popurality','rating' ]
+required_columns = ['data id_info', 'nation', 'region', 'name', 'operationTime', 'expense', 'infoTitle', 'infoContent', 'information', 'map_url', 'popularity','rating' ]
 df = df[required_columns]
 
 # CSV 파일 저장

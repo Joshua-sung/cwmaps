@@ -24,17 +24,26 @@ service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
 
 # 국가 정보
-country = "China"
+country = "Japan"
 
 # 도시 목록
 cities = [
-    # "Shanghai", "Zhangjiajie", "Qingdao", 
-    "Tianjin"
-    # , "Beijing", "Hainan", "Xi'an", 
-    # "Dalian", "Chengdu", "Guangzhou", "Chongqing", "Shenzhen", "Yantai", "Xiamen", 
-    # "Hangzhou", "Suzhou", "Harbin", "Lijiang", "Kunming", "Nanjing", 
-    # "Yanbian Korean Autonomous Prefecture", "Guilin"
+    "Fukuoka",
+    "Osaka",
+    "Tokyo",
+    "Sapporo",
+    "Okinawa",
+    "Kyoto",
+    "Nagoya",
+    "Yufu",
+    "Kobe",
+    "Yokohama",
+    "Nagasaki",
+    "Nara",
+    "Hiroshima",
+    "Kagoshima"
 ]
+
 # 카테고리 목록 (영어로 변경)
 categories = [
     'Historic site', 'Theme Park', 'Activity', 'Natural Scenery','Tourist attraction','Things to do', 
@@ -107,8 +116,8 @@ for city in cities:
                 popularity = place.find_element(By.CLASS_NAME, 'UY7F9').text if place.find_elements(By.CLASS_NAME, 'UY7F9') else '0'
                 popularity = re.sub(r'[^\d]', '', popularity)  # 숫자가 아닌 문자 제거
                 popularity = int(popularity) if popularity else 0  # 빈 문자열을 0으로 처리
-                if popularity < 50:
-                    continue  # 리뷰 수가 50 미만인 경우 무시
+                if popularity < 0:
+                    continue  # 리뷰 수가 0 미만인 경우 무시
 
                 info_content = None
                 expense = None
