@@ -13,10 +13,10 @@ load_dotenv()
 API_KEY = os.getenv('API_KEY')
 
 # 사용자 정의 변수
-max_data_count = 140  # 저장할 최대 데이터 개수
-DAILY_REQUEST_LIMIT = 250  # 하루 요청 한도 설정
+max_data_count = 60  # 저장할 최대 데이터 개수
+DAILY_REQUEST_LIMIT = 60  # 하루 요청 한도 설정
 request_count = 0  # 현재 요청 횟수
-city = "Kobe"  # 도시 설정
+city = "Kagoshima"  # 도시 설정
 country = "Japan"  # 국가 설정
 categories = [
     'Historic site', 'Theme Park', 'Activity', 'Natural Scenery','Tourist attraction','Things to do', 
@@ -27,9 +27,8 @@ categories = [
     'Mountain View', 'Waterfall', 'Lake', 'Beach', 'National Park', 
     'Historical Village', 'Archaeological Site', 'Castle', 'Fort', 
     'Local Festival', 'Scenic Railway', 'Gardens', 
-    'Public Park', 'Skyline View', 'Adventure Park', 
-    'Botanical Park', 'Urban Park', 'Art District', 
-    'Historical Building', 
+    'Skyline View', 'Adventure Park', 
+    'Art District', 'Historical Building', 
 ]
 
 # 모든 결과를 저장할 리스트 및 중복 확인을 위한 집합

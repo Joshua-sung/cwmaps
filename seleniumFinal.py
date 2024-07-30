@@ -24,24 +24,11 @@ service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
 
 # 국가 정보
-country = "Japan"
+country = "China"
 
 # 도시 목록
 cities = [
-    "Fukuoka",
-    "Osaka",
-    "Tokyo",
-    "Sapporo",
-    "Okinawa",
-    "Kyoto",
-    "Nagoya",
-    "Yufu",
-    "Kobe",
-    "Yokohama",
-    "Nagasaki",
-    "Nara",
-    "Hiroshima",
-    "Kagoshima"
+    "Yanbian",
 ]
 
 # 카테고리 목록 (영어로 변경)
@@ -49,14 +36,14 @@ categories = [
     'Historic site', 'Theme Park', 'Activity', 'Natural Scenery','Tourist attraction','Things to do', 
     'Museums','Landmark',
     'Night View', 'Nature Reserve', 'Zoo', 'Theme Tour', 'Traditional Market', 
-    'Architectural Marvel','Monument', 'Art Gallery', 'Museum of Art',  'Cultural Heritage',
+    'Architectural Marvel','Monument', 'Art Gallery', 'Museum of Art', 'Cultural Heritage',
     'Botanical Garden', 'Hiking Trail', 'Wildlife Sanctuary', 
     'Mountain View', 'Waterfall', 'Lake', 'Beach', 'National Park', 
     'Historical Village', 'Archaeological Site', 'Castle', 'Fort', 
     'Local Festival', 'Scenic Railway', 'Gardens', 
     'Public Park', 'Skyline View', 'Adventure Park', 
     'Botanical Park', 'Urban Park', 'Art District', 
-    'Historical Building', 
+    'Historical Building'
 ]
 
 # 중복 URL을 확인하기 위한 집합

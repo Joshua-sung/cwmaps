@@ -3,7 +3,7 @@ import os
 import re
 
 # 도시 이름 설정
-city = "Chengdu"
+city = "Guilin"
 
 # 현재 파일의 위치를 기준으로 경로 설정
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -20,7 +20,7 @@ combined_df = pd.concat([cash_places, travel_places], ignore_index=True)
 combined_df = combined_df.drop_duplicates(subset=['name'], keep='first')
 
 # 제외할 단어 리스트
-exclude_keywords = ['hotel', 'resort', 'pub', 'bar', 'Ritz Carlton', 'Railway Station', 'inn', 'Hilton', '인터콘티넨탈', '콘레드',  '호텔', '공항', '하얏트', '역', '호스텔', '힐튼', 'tours', '료칸', '홀리데이 인', '국제공항', '리조트', 'Night club']
+exclude_keywords = ['hotel', 'resort', 'pub','Club', 'bar', 'Conrad','Hyatt', 'Railway Ticket', 'The Westin', 'Ritz Carlton', 'Railway Station', 'inn', 'Hilton', '인터콘티넨탈', '콘레드',  '호텔', '공항', '하얏트', '역', '호스텔', '힐튼', 'tours', '료칸', '홀리데이 인', '국제공항', '리조트', 'Night club']
 
 # 정규 표현식을 사용하여 이름 필터링
 def should_exclude(name):
