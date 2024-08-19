@@ -23,7 +23,6 @@ options.add_argument("--disable-dev-shm-usage")
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
 
-
 # 국가 정보
 country = "China"
 
@@ -39,9 +38,6 @@ cities = [
     "Shaoxing",
     "Taiyuan",
 ]
-
-
-
 
 # 카테고리 목록 (영어로 변경)
 categories = [
@@ -69,7 +65,7 @@ for city in cities:
     for category in categories:
         query = f"{city} {category}"
         # Google Maps 접속
-        maps_url = f"https://www.google.com/maps/place/{country},+{city}/"
+        maps_url = f"https://www.google.com/maps/place/{city}/"
         driver.get(maps_url)
         
         # 페이지 로드 대기
@@ -118,6 +114,11 @@ for city in cities:
                 if popularity < 1:
                     continue  # 리뷰 수가 1 미만인 경우 무시
 
+                # 주소 정보를 가져와서 지정한 도시 이름이 포함되어 있는지 확인
+                address = place.find_element(By.CLASS_NAME, 'rllt__details').text
+                if city not in address:
+                    continue  # 주소에 지정한 도시가 포함되지 않은 경우 무시
+                
                 info_content = None
                 expense = None
 

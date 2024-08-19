@@ -13,17 +13,17 @@ load_dotenv()
 API_KEY = os.getenv('API_KEY')
 
 # 사용자 정의 변수
-max_data_count = 60  # 저장할 최대 데이터 개수
-DAILY_REQUEST_LIMIT = 60  # 하루 요청 한도 설정
+max_data_count = 50  # 저장할 최대 데이터 개수
+DAILY_REQUEST_LIMIT = 50  # 하루 요청 한도 설정
 request_count = 0  # 현재 요청 횟수
-city = "Kagoshima"  # 도시 설정
+city = "Takamatsu"  # 도시 설정
 country = "Japan"  # 국가 설정
 categories = [
     'Historic site', 'Theme Park', 'Activity', 'Natural Scenery','Tourist attraction','Things to do', 
     'Museums','Landmark',
     'Night View', 'Nature Reserve', 'Zoo', 'Theme Tour', 'Traditional Market', 
     'Architectural Marvel','Monument', 'Art Gallery', 'Museum of Art',  'Cultural Heritage',
-    'Botanical Garden', 'Hiking Trail', 'Wildlife Sanctuary', 
+    'Botanical Garden', 'Wildlife Sanctuary', 
     'Mountain View', 'Waterfall', 'Lake', 'Beach', 'National Park', 
     'Historical Village', 'Archaeological Site', 'Castle', 'Fort', 
     'Local Festival', 'Scenic Railway', 'Gardens', 
@@ -208,7 +208,7 @@ for category in categories:
             details = get_place_details(place_id_en)
             rating = details.get('rating', '0')
             popularity = details.get('user_ratings_total', 0)
-            if popularity < 0:
+            if popularity < 30:
                 continue  # 리뷰 수가 0개 미만인 장소는 무시
 
             operation_time = parse_opening_hours(details.get('opening_hours', {}))
