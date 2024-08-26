@@ -3,7 +3,7 @@ import os
 import re
 
 # 도시 이름 설정
-city = "Miyagi"
+city = "Sukhothai"
 
 # 현재 파일의 위치를 기준으로 경로 설정
 current_dir = os.path.dirname(os.path.abspath(__file__))

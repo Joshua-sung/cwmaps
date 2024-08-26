@@ -25,21 +25,20 @@ driver = webdriver.Chrome(service=service, options=options)
 
 
 # 국가 정보
-country = "China"
+country = "Thailand"
 
 cities = [
-    "Hong Kong",
-    "Macau",
-    "Lushan",
-    "Jiuzhaigou",
-    "Lhasa",
-    "Dunhuang",
-    "Zhuhai",
-    "Lugu Lake",
-    "Shaoxing",
-    "Taiyuan",
+    "Sukhothai",
+    "Surat Thani",
+    "Chanthaburi",
+    "Mae Sot",
+    "Nong Khai",
+    "Nakhon Si Thammarat",
+    "Lampang",
+    "Udon Thani",
+    "Khao Sok",
+    "Mae Hong Son",
 ]
-
 
 
 
